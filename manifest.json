@@ -1,0 +1,9 @@
+{
+	"id": "killbill",
+	"version": "0.1",
+	"name": "Kill Bill",
+	"author": "Kill Bill core team",
+	"contact": "killbill-users@googlegroups.com",
+	"description": "Kill Bill for Hive",
+	"icon": "Icon.png"
+}

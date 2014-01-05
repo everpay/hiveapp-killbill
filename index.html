@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Kill Bill for Hive Wallet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kill Bill application for Hive Wallet">
+  <meta name="author" content="Kill Bill core team">
+
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/killbill.css" rel="stylesheet" type="text/css" />
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/killbill-client.min.js"></script>
+  <script src="js/killbill.js"></script>
+</head>
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Kill Bill</a>
+      </div>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="nav navbar-nav">
+          <li><a href="#" id="logout" style="display: none;">Logout</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+  <div id="container" class="container">
+    <div class="row">
+      <div class="col-lg-6">
+
+        <div class="alert alert-success" style="display: none;" id="messages-alert-success"></div>
+        <div class="alert alert-danger" style="display: none;" id="messages-alert-error"></div>
+
+        <div id="signin-container">
+          <h3>Sign in</h3>
+          <div id="login">
+            <form role="form" id="signin">
+              <div class="form-group">
+                <label for="btc_address">Bitcoin address</label>
+                <input type="btc_address" class="form-control input-sm" id="btc_address" placeholder="Enter your address">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password">
+              </div>
+              <button type="submit" class="btn btn-default pull-right" id="signin-submit">Submit</button>
+            </form>
+          </div>
+        </div><!-- #signin-container -->
+
+        <div id="userdata" style="display: none;">
+          <div id="#account">
+            <div class="span8">
+                <h3><span id="account-name"></span></h3>
+                <h6>Email: <span id="account-email"></span></h6>
+                <h6>Location: <span id="account-city"></span>, <span id="account-country"></span></h6>
+            </div>
+          </div><!-- #account -->
+
+          <div id="#payments">
+            <h3>Payments</h3>
+            <table class="table table-condensed table-responsive" id="payments-table">
+              <thead></thead>
+              <tbody></tbody>
+            </table>
+          </div><!-- #payments -->
+        </div><!-- #userdata -->
+
+      </div>
+    </div>
+  </div><!-- /.container -->
+</body>
+</html>
